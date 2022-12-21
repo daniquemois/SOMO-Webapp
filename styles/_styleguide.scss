@@ -1,0 +1,28 @@
+// Custom properties
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$main-font: "poppins", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+$secondary-font: "Merriweather", sans-serif;
+
+// Colors
+$somo-rood: #e30513;
+$somo-blauw: #29e4d2;
+$licht-groen: #a5af49;
+$geel: #e4bc00;
+$beige: #e7e7d9;
+$donkerblauw: #250f6f;
+$legergroen: #93956f;
+
+body {
+    background: $beige;
+    font-family: sans-serif;
+}
+h1{
+    font-family: $main-font;
+}
+h2{
+    font-family: $secondary-font;
+}
