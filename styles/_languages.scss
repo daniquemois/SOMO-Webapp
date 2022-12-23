@@ -1,0 +1,11 @@
+:lang(en) [data-en] { display: block; }
+:lang(en) [data-pt] { display: none; }
+:lang(en) [data-nl] { display: none; }
+
+:lang(pt) [data-pt] { display: block; }
+:lang(pt) [data-en] { display: none; }
+:lang(pt) [data-nl] { display: none; }
+
+:lang(nl) [data-nl] { display: block; }
+:lang(nl) [data-en] { display: none; }
+:lang(nl) [data-pt] { display: none; }
