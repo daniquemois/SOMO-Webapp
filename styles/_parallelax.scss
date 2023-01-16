@@ -1,0 +1,81 @@
+.greenworld{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    #intro{
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        width: 33vw;
+        margin-left: 30vw;
+        margin-top: -40vh;
+        font-size: 24px;
+        color: black;
+        font-family: $main-font;
+        text-align: center;
+      }
+    .info1{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: $somo-rood;
+        border-radius: 50%;
+        position: relative;
+        left: 43.5vw;
+        margin-bottom: 10em;
+        border: none;
+        z-index: 1;
+    }
+    .info1:before {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        border: 1px solid $somo-rood;
+        border-radius: inherit;
+        position: absolute;
+        z-index: -10;
+        opacity: 0;
+        animation: 2s expand cubic-bezier(.29,0,0,1) infinite;
+        animation-delay: 1s;
+    }
+    @keyframes expand{
+        /* Starting at 1 to prevent IOS flicker */
+        1% {
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        100%
+        {
+          width: 750%;
+          height: 750%;
+          opacity: 0;
+          border-color: #fff;
+          background-color: none;
+          border-width: 2px;
+        }
+      }
+}
+
+main{
+    section{
+        background-color: $beige;
+        position: relative;
+        height: 100vh;
+        z-index: 2;
+        margin-top: -1em;
+    }
+}
