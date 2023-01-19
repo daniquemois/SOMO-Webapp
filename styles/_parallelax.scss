@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+    width: 100%;
     img{
         position: absolute;
         left: 0;
@@ -24,7 +26,7 @@
         font-family: $main-font;
         text-align: center;
       }
-    .info1{
+    #info1{
         display:flex;
         justify-content: center;
         align-items: center;
@@ -38,7 +40,7 @@
         border: none;
         z-index: 1;
     }
-    .info1:before {
+    #info1:before {
         content: "";
         position: absolute;
         width: inherit;
@@ -69,13 +71,63 @@
         }
       }
 }
-
-main{
-    section{
-        background-color: $beige;
-        position: relative;
-        height: 100vh;
-        z-index: 2;
-        margin-top: -1em;
-    }
+.verdrag{
+  background-color: $beige;
+  position: relative;
+  height: 100vh;
+  z-index: 2;
+  margin-top: -1em;
+  img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+.data{
+  position: relative;
+  padding-top: 10em;
+  z-index: 10;
+}
+.data2{
+  z-index: 15;
+  position: relative;
+  padding-top: 10em;
+}
+.orangeworld{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  #orangeworldlayer3{
+    height: 60vh;
+    object-fit: contain;
+    bottom: 0;
+    top: unset;
+  }
+  img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+  }
+  #kaarttekst{
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 28vw;
+    margin-left: 35vw;
+    margin-top: -50vh;
+    font-size: 16px;
+    color: black;
+    font-family: $main-font;
+    text-align: center;
+  }
 }
