@@ -8,9 +8,6 @@ function Engelsfunctie(){
     if(theLanguage == "pt" || theLanguage == "nl"){
         html.setAttribute("lang", "en")
     }
-    else{
-        html.setAttribute("lang", "en")
-    }
 }
 engelsButton.addEventListener("click", Engelsfunctie)
 
@@ -23,6 +20,9 @@ portugeesButton.addEventListener("click", Portugeesfunctie)
 
 function Nederlandsfunctie(){
     if(theLanguage == "pt" || theLanguage == "en"){
+        html.setAttribute("lang", "nl")
+    }
+    else{
         html.setAttribute("lang", "nl")
     }
 }

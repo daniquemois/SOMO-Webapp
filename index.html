@@ -10,33 +10,67 @@
 
     <header>
       <h1 data-nl id="titel">Het belastingprobleem in <strong>Mozambique</strong></h1>
-      <h1 data-en id="titel">The tax problem in <strong>Mozambique</strong></h1>
-      <h1 data-pt id="titel">O problema fiscal em <strong>Moçambique</strong></h1>
+      <h1 data-en id="titelen">The tax problem in <strong>Mozambique</strong></h1>
+      <h1 data-pt id="titelpt">O problema fiscal em <strong>Moçambique</strong></h1>
       <section class="menu">
-        <button data-en>Table of contents</button>
-        <button data-pt>índice</button>
-        <ul data-nl class="tableofcontents">
-          <li>Intro</li>
+        <ul data-nl class="tableofcontents tocnl">
           <li>Wat is het probleem?</li>
-            <ul class="nonlist">
-              <li>Wat is belastingontwijking?</li>
-              <li>Wat is een doorsluisland?</li>
-            </ul>
+          <li>Wat is belastingontwijking?</li>
+          <li>Wat is een doorsluisland?</li>
           <li>Wat houd dit in voor Mozambique?</li>
-            <ul class="nonlist">
-              <li>Welke landen hebben verdragen met Mozambique?</li>
-              <li>Wat houd dit in voor Mozambikanen?</li>
-            </ul>
+          <li>Welke landen hebben deze vedragen?</li>
+          <li>Wat houd dit in voor Mozambikanen?</li>
           <li>Hoe kunnen we dit probleem oplossen?</li>
-            <ul class="nonlist">
-              <li>Wat zijn de mogelijke oplossingen?</li>
-              <li>Wat kan ik hieraan doen?</li>
-            </ul>
-          </ul>
+          <li>Wat zijn de mogelijke oplossingen?</li>
+          <li>Wat kan ik hieraan doen?</li>
+          <article>
+            <h3>Hierbij teken ik dit verdrag voor 0% winstbelasting:</h3>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </article>
+        </ul>
+        <ul data-en="" class="tableofcontents tocen">
+          <li>What is the problem?</li>
+          <li>What is tax avoidance?</li>
+          <li>What is a tax haven?</li>
+          <li>What does this mean for Mozambique?</li>
+          <li>Which countries have these treaties?</li>
+          <li>What does this mean for Mozambicans?</li>
+          <li>How can we solve this problem?</li>
+          <li>What are the possible solutions?</li>
+          <li>What can I do about it?</li>
+          <article>
+            <h3>Hereby I sign this treaty for 0% profit tax:</h3>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </article>
+        </ul>
+        <ul data-pt class="tableofcontents tocpt">
+          <li>O que é o problema?</li>
+          <li>O que é a evasão fiscal?</li>
+          <li>O que é um paraíso fiscal?</li>
+          <li>O que isso significa para Moçambique?</li>
+          <li>Quais países têm esses tratados?</li>
+          <li>O que isso significa para os moçambicanos?</li>
+          <li>Como podemos resolver esse problema?</li>
+          <li>Quais são as possíveis soluções?</li>
+          <li>O que posso fazer a respeito?</li>
+          <article>
+            <h3>Aqui eu assino este tratado para 0% de imposto de lucro:</h3>
+            <label class="switch">
+              <input type="checkbox" onchange="checkboxChanged()">
+              <span class="slider round"></span>
+            </label>
+          </article>
+        </ul>
         <article>
-          <button class="engels">Engels</button>
-          <button class="portugees">Portugees</button>
-          <button class="nederlands">Nederlands</button>
+          <button class="engels"></button>
+          <button class="portugees"></button>
+          <button class="nederlands"></button>
         </article>
       </section>
       <section class="greenworld">
@@ -54,12 +88,59 @@
 
     <main>
       <section class="verdrag">
+        <article>
+          <img src="./images/verdag.png" class="verdragpl">
+          <section class="showbijondertekening">
+            <h2>Jij hebt er mede voor gezorgd dat Mozambique <strong>geen winst</strong> maakt en hierdoor zich niet kan ontwikkelen</h2>
+          </section>
+          <section class="showbijondertekening">
+            <img src="./images/icons/banen-vs5.svg">
+            <p data-nl><strong>Minder</strong> kinderen naar de basisschool</p>
+            <p data-en><strong>Less</strong> children to school</p>
+            <p data-pt><strong>Mais</strong> crianças na escola</p>
+          </section>
+          <section class="showbijondertekening">
+            <img src="./images/icons/hst-vs3.svg">
+            <p data-nl><strong>Minder</strong> baan mogelijkheden voor docenten</p>
+            <p data-en><strong>Less</strong> job opportunities for teachers</p>
+            <p data-pt><strong>Mais</strong> oportunidades de emprego para professores</p>
+          </section>
+          <section class="showbijondertekening">
+            <img src="./images/icons/inra-vs4.svg">
+            <p data-nl><strong>Minder</strong> mogelijkheid voor verbetering infrastructuur</p>
+            <p data-en><strong>Less</strong> opportunity for infrastructure improvement</p>
+            <p data-pt><strong>Mais</strong> oportunidades para melhorar a infraestrutura</p>
+          </section>
+          <button data-nl class="onderteken">Teken hier het verdrag</button>
+          <button data-en class="onderteken">Sign here the treaty</button>
+          <button data-pt class="onderteken">Assine aqui o tratado</button>
+        </article>
         <img src="./images/Verdag-Oil-field.png" id="verdaglayer2">
         <img src="./images/Verdag-Front-Bush.png" id="verdaglayer1">
-        <img src="./images/Verdag.png" id="verdaglayer3">
       </section>
-      <section class="data">
-        <h2>Wat is <strong>belastingontwijking</strong></h2>
+
+      <section class="data blauw">
+        <h2 data-nl>Wat is belastingontwijking</h2>
+        <h2 data-en>What is tax evasion</h2>
+        <h2 data-pt>O que é evasão fiscal</h2>
+        <h3 data-nl>Wat houd het in?</h3>
+        <h3 data-en>What does it mean?</h3>
+        <h3 data-pt>O que isso significa?</h3>
+        <p data-nl>Bedrijf A's voorbeeld laat zien hoe sommige bedrijven, vaak grote bedrijven, een deel van hun belasting kunnen ontwijken. Dit gebeurt vaak door middel van een zogeheten "on-/off-switch" waarbij een bedrijf een anoniem bedrijf opzet in een ander land, waar ze een deel van hun winst naar toe verplaatsen. Dit bedrijf koopt dan bijvoorbeeld een recept of licentie van het anonieme bedrijf waardoor de winst lijkt te verminderen, terwijl in werkelijkheid de winst hetzelfde blijft maar de belasting minder wordt. Dit soort praktijken kan leiden tot een groot geldverlies voor de overheid en kan ook oneerlijke concurrentie veroorzaken voor andere bedrijven die wel hun belastingen betalen. Het is belangrijk dat er maatregelen worden genomen om dit soort praktijken tegen te gaan en ervoor te zorgen dat bedrijven hun eerlijke deel van de belasting betalen.</p>
+        <p data-en>Company A's example shows how some companies, often large companies, can avoid part of their tax. This often happens through a so-called "on-/off-switch" where a company sets up an anonymous company in another country, where they move part of their profit to. This company then buys, for example, a recipe or license from the anonymous company so that the profit seems to decrease, while in reality the profit remains the same but the tax is less. Such practices can lead to a large loss of money for the government and can also cause unfair competition for other companies that do pay their taxes. It is important that measures are taken to counteract such practices and ensure that companies pay their fair share of tax.</p>
+        <p data-pt>O exemplo da empresa A mostra como algumas empresas, muitas vezes empresas grandes, podem evitar parte de seus impostos. Isso geralmente acontece por meio de um chamado "interruptor on-/off" em que uma empresa cria uma empresa anônima em outro país, onde eles movem parte de seu lucro. Esta empresa, por exemplo, compra uma receita ou licença da empresa anônima, para que o lucro pareça diminuir, enquanto na realidade o lucro permanece o mesmo, mas o imposto é menor. Essas práticas podem levar a uma grande perda de dinheiro para o governo e também podem causar concorrência desleal para outras empresas que pagam seus impostos. É importante que medidas sejam tomadas para combater essas práticas e garantir que as empresas paguem sua parte justa de impostos.</p>
+      </section>
+
+      <section class="data blauw">
+        <h2 data-nl>Doorsluislanden</h2>
+        <h2 data-en>Offshore countries</h2>
+        <h2 data-pt>Países offshore</h2>
+        <h3 data-nl>Wat zijn dat?</h3>
+        <h3 data-en>What are they?</h3>
+        <h3 data-pt>O que são?</h3>
+        <p data-nl>Een belastingsdoorsluisland is een belastingtechnische constructie waarbij een bedrijf of organisatie investeringen in een land doet via een tussenmaatschappij in een ander land met een lagere belastingtarief. Dit wordt gedaan om de belastingdruk op de winst van het bedrijf of de organisatie te verminderen. Een Amerikaans bedrijf wil investeringen doen in land A waar de belastingtarieven op winst hoog zijn. In plaats daarvan sticht het bedrijf een dochteronderneming in land B, een land met lagere belastingtarieven, en investeert geld in de dochteronderneming. De dochteronderneming maakt winst en betaalt belasting in land B, met een lager tarief dan in land A. Vervolgens leidt het bedrijf geld terug naar de moederonderneming in de Verenigde Staten, waardoor de belastingdruk op de winst van het bedrijf vermindert.</p>
+        <p data-en>An offshore tax haven is a tax-technical construction in which a company or organization invests in a country via a subsidiary company in another country with a lower tax rate. This is done to reduce the tax burden on the profit of the company or organization. An American company wants to invest in country A where the tax rates on profit are high. Instead, the company establishes a subsidiary in country B, a country with lower tax rates, and invests money in the subsidiary. The subsidiary makes a profit and pays tax in country B, with a lower rate than in country A. Then the company transfers money back to the parent company in the United States, reducing the tax burden on the profit of the company.</p>
+        <p data-pt>Um paraíso fiscal offshore é uma construção tributária em que uma empresa ou organização investe em um país por meio de uma subsidiária em outro país com uma taxa de imposto menor. Isso é feito para reduzir a carga tributária sobre o lucro da empresa ou organização. Uma empresa americana quer investir no país A, onde os impostos sobre o lucro são altos. Em vez disso, a empresa estabelece uma subsidiária no país B, um país com
       </section>
     
       <section class="orangeworld" id="orangeworld">
@@ -70,6 +151,22 @@
         <p id="kaarttekst"></p>
         <img src="./images/Greenworld/Website-layers-01.png" id="orangelayer8">
         <img src="./images/Oangeworld/Orange-kid_Oiljack-left.png" id="orangeworldlayer3">
+      </section>
+
+      <section class="data2">
+        <h2>Wat is een <strong>doorsluisland</strong></h2>
+        <div class="mapcont">
+          <svg id="map"></svg>
+        </div>
+      </section>
+
+      <section class="blueworld" id="blueworld">
+        <img src="./images/Blueworld/Blue-bg.png" id="blueworldlayer1">
+        <img src="./images/Blueworld/Blue-houses_Oiljack-left.png" id="blueworldlayer2">
+        <img src="./images/Blueworld/Blue-overlay+bush_Oiljack-left.png" id="blueworldlayer3">
+        <p id="oplossingtekst"></p>
+        <img src="./images/Greenworld/Website-layers-01.png" id="bluelayer5">
+        <img src="./images/Blueworld/Blue-character_Oiljack-left.png" id="blueworldlayer4">
       </section>
 
       <section class="data2">

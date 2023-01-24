@@ -21,7 +21,7 @@
         width: 33vw;
         margin-left: 30vw;
         margin-top: -40vh;
-        font-size: 24px;
+        font-size: 16px;
         color: black;
         font-family: $main-font;
         text-align: center;
@@ -77,13 +77,73 @@
   height: 100vh;
   z-index: 2;
   margin-top: -1em;
-  img{
+  > img{
     position: absolute;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+  }
+  article{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > img{
+      position: absolute;
+      left: 0;
+      top: -5em;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+    h2{
+      z-index: 100;
+      text-align: left;
+      width: 20em;
+      margin-top: 2em;
+      margin-left: 1em;
+    }
+    button{
+      z-index: 100;
+      width: 15%;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      font-family: $main-font;
+      margin-left: -17%;
+      border: none;
+      padding: .2em;
+    }
+    section:first-of-type{
+      margin-top: -8em;
+      h2{
+        font-size: 24px;
+        z-index: -1;
+        width: 30em;
+        text-align: center;
+        margin-bottom: 1em;
+        font-weight: 200;
+      }
+    }
+    section{
+      display: flex;
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;;
+      img{
+        height: 5em;
+      }
+      p{
+        font-style: $main-font;
+        font-size: 18px;
+        font-weight: 200;
+      }
+    }
   }
 }
 .data{
@@ -124,6 +184,41 @@
     margin: 0 auto;
     width: 28vw;
     margin-left: 35vw;
+    margin-top: -50vh;
+    font-size: 16px;
+    color: black;
+    font-family: $main-font;
+    text-align: center;
+  }
+}
+.blueworld{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  #blueworldlayer4{
+    height: 80vh;
+    object-fit: contain;
+    bottom: 0;
+    top: unset;
+  }
+  img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+  }
+  #oplossingtekst{
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 28vw;
+    margin-left: 43vw;
     margin-top: -50vh;
     font-size: 16px;
     color: black;

@@ -13,6 +13,30 @@ header{
     justify-content: space-between;
     text-align: center;
     width: 100%;
+    .engels{
+        background-image: url("../images/eng-icoon.png");
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        background-size: cover;
+        width: 3em;
+        border: unset;
+    }
+    .portugees{
+        background-image: url("../images/pt-icoon.png");
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        background-size: cover;
+        width: 3em;
+        border: unset;
+    }
+    .nederlands{
+        background-image: url("../images/nl-icoon.png");
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        background-size: cover;
+        width: 3em;
+        border: unset;
+    }
     h1{
         position: fixed;
         text-align: center;
@@ -22,9 +46,6 @@ header{
         font-family: $main-font;
         font-weight: 300;
     }
-    button{
-        width: 10em;
-    }
     .menu{
         position: fixed;
         z-index: 100;
@@ -33,35 +54,81 @@ header{
         flex-direction: row;
         justify-content: flex-end;
         width: 100vw;
+        padding: 1em;
         overflow: hidden;
+        .tableofcontents{
+            background-image: url("../images/Verdrag-noblack.png");
+            aspect-ratio: 1 / 1.1;
+            background-size: cover;
+        }
         > ul{
             position: fixed;
             opacity: 1;
-            top: 25%;
-            transform: translateX(100%);
+            top: 12%;
+            transform: translateX(87%);
             transition: transform 0.3s;
-            padding: 1em;
+            padding: .5em;
+            text-align: left;
+            article{
+                padding: 1em;
+                border-top: 1px solid black;
+                margin-top: 2em;
+                h3{
+                    text-align: left;
+                    position: relative;
+                    width: 20em;
+                    font-family: $main-font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-bottom: 1em;
+                }
+            }
+            li{
+                padding-left: 5em;
+            }
+            li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(5), li:nth-of-type(6), li:nth-of-type(8), li:nth-of-type(9){
+                padding-left: 8.85em !important;
+                margin-left: -0.85em !important;
+            }
+            li:before {
+                content: "";
+                position: absolute;
+                left: -1.5em;
+                border-left: 1px solid black;
+                width: 1px;
+                height: 50px;
+                z-index: -1;
+            }
+            > li::marker{
+                font-size: 64px;
+                position: relative;
+                z-index: 1;
+            }
             > li:first-of-type::marker{
-                color: $somo-rood;
-                font-size: 48px;
-            }
-            > li:nth-of-type(2)::marker{
                 color: $somo-blauw;
-                font-size: 48px;
             }
-            > li:nth-of-type(3)::marker{
-                color: $licht-groen;
-                font-size: 48px;
+            > li:nth-of-type(2)::marker, li:nth-of-type(3)::marker{
+                color: $somo-blauw;
+                font-size: 32px!important;
             }
             > li:nth-of-type(4)::marker{
+                color: $licht-groen;
+                font-size: 64px;
+            }
+            > li:nth-of-type(5)::marker, li:nth-of-type(6)::marker{
+                color: $licht-groen;
+                font-size: 32px;
+            }
+            > li:nth-of-type(7)::marker{
                 color: $geel;
-                font-size: 48px;
+                font-size: 64px;
+            }
+            > li:nth-of-type(8)::marker, li:nth-of-type(9)::marker{
+                color: $geel;
+                font-size: 32px;
             }
         }
     }
-}
-.nonlist li{
-    list-style: none!important;
 }
 .active{
     transform: translateX(0%)!important;
@@ -70,12 +137,125 @@ header{
 main{
     background-color: $beige;
     margin-top: -1em;
-    h2{
-        text-align: center;
+    .blauw{
+      margin-left: 15%;
+      margin-right: 15%;
+      h2{
+        text-align: left;
         width: 100%;
         font-size: 24px;
         font-family: $main-font;
         font-weight: 300;
+        color: #10A4A2;
+      }
     }
-    
+    .data{
+      h3{
+        text-align: left;
+        font-size: 48px;
+        font-family: $main-font;
+        font-weight: 600;
+        color: $zwart;
+      }
+      p{
+        font-weight: 300;
+        font-family: $main-font;
+      }
+    }
 }
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: white;
+  }
+#map{
+    width: 80%;
+    margin-left: -10%;
+    height: 80%;
+    .countries {
+        fill: $legergroen;
+        stroke: $beige;
+        stroke-width: 1.2;
+      }
+      .belastingland{
+        fill: $geel!important;
+        stroke: $beige;
+        stroke-width: 1.2;
+      }
+      .belastingland:hover{
+        fill: $somo-rood!important;
+        stroke: $beige;
+        stroke-width: 1.2;
+      }
+      .countries:hover{
+        cursor: pointer;
+        stroke-width: 1.2;
+      }
+      .tekstblok{
+        background-color: hotpink;
+      }
+}
+// switch
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $beige;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-size: cover;
+    background-image: url("../images/pen.jpg");
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: $somo-blauw;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $somo-blauw;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .hide{
+    display: none!important;
+  }

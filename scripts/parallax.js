@@ -8,6 +8,8 @@ let layer7 = document.getElementById('greenlayer7');
 let layer8 = document.getElementById('greenlayer8');
 let button1 = document.getElementById('info1');
 let titel = document.getElementById("titel");
+let titelen = document.getElementById("titelen");
+let titelpt = document.getElementById("titelpt");
 
 let olayer1 = document.getElementById("orangeworldlayer1");
 let olayer2 = document.getElementById("orangeworldlayer2");
@@ -15,12 +17,19 @@ let olayer3 = document.getElementById("orangeworldlayer3");
 let olayer4 = document.getElementById("orangeworldlayer4");
 let olayer5 = document.getElementById("orangeworldlayer5");
 
+let bluelayer1 = document.getElementById("blueworldlayer1");
+let bluelayer2 = document.getElementById("blueworldlayer2");
+let bluelayer3 = document.getElementById("blueworldlayer3");
+let bluelayer4 = document.getElementById("blueworldlayer4");
+
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
     layer1.style.top = value * 1.8 + 'px';
     button1.style.top = value * 1.5 + 'px';
     titel.style.top = value * -1.5 + 'px';
+    titelen.style.top = value * -1.5 + 'px';
+    titelpt.style.top = value * -1.5 + 'px';
     layer2.style.top = value * 1.5 + 'px';
     layer7.style.top = value * 1.5 + 'px';
 })
@@ -36,6 +45,20 @@ window.addEventListener('scroll', () => {
     if(currentScroll > startSection){
         olayer2.style.transform = "translateY(" + (currentScroll - startSection) * 1.3 + "px)";
         olayer4.style.transform = "translateY(" + (currentScroll - startSection) * 1.8 + "px)";
+    }
+})
+
+window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset;
+    let blueSection = document.querySelector("#blueworld").offsetTop;
+
+    window.onscroll = function() {
+        currentScroll = window.pageYOffset;
+      }
+
+    if(currentScroll > blueSection){
+        bluelayer1.style.transform = "translateY(" + (currentScroll - blueSection) * 1.3 + "px)";
+        // bluelayer2.style.transform = "translateY(" + (currentScroll - blueSection) * 1.8 + "px)";
     }
 })
 
@@ -108,3 +131,38 @@ function text2Effect() {
     }
 }
 olayer3.addEventListener("click", text2Effect)
+
+
+var index3 = 0;
+var text3nl = 'Ik kan eindelijk weer naar school! Bedankt voor je hulp!';
+var text3en = 'I can finally go back to school! Thanks for your help!';
+var text3pt = "Eu posso finalmente voltar para a escola! Obrigado pela sua ajuda!";
+var speed = 50;
+  
+function tekst3Effect() {
+    if(document.getElementsByTagName("html")[0].getAttribute("lang") == "en"){
+        if (index3 < text2en.length) {
+            document.getElementById("oplossingtekst")
+                    .innerHTML += text2en.charAt(index3);
+            index3++;
+            setTimeout(tekst3Effect, speed);
+        }
+    }
+    if(document.getElementsByTagName("html")[0].getAttribute("lang") == "nl"){
+        if (index3 < text3nl.length) {
+            document.getElementById("oplossingtekst")
+                    .innerHTML += text3nl.charAt(index3);
+            index3++;
+            setTimeout(tekst3Effect, speed);
+        }
+    }
+    else{
+        if (index3 < text3pt.length) {
+            document.getElementById("oplossingtekst")
+                    .innerHTML += text3pt.charAt(index3);
+            index3++;
+            setTimeout(tekst3Effect, speed);
+        }
+    }
+}
+bluelayer4.addEventListener("click", tekst3Effect)
