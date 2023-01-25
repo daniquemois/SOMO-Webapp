@@ -25,7 +25,7 @@ function verdragTeken() {
     ondertekenKnop.style.display = "none";
     handtekeningtoggle.style.display = "none";
     verscheurKnop.style.display = "block";
-    wafel.setAttribute("src", "./images/Oangeworld/waffle-6-oranje.png")
+    wafel.setAttribute("src", "./images/oangeworld/waffle-6-oranje.png")
     wafeltekst.innerHTML = "<strong>-</strong>$140 Miljoen";
     wafelteksten.innerHTML = "<strong>-</strong>$140 Million";
     wafeltekstpt.innerHTML = "<strong>-</strong>$140 Milhões";
@@ -45,7 +45,7 @@ function verdragVerscheur() {
     ondertekenKnop.style.display = "block";
     verscheurKnop.style.display = "none";
     handtekeningtoggle.style.display = "block";
-    wafel.setAttribute("src", "./images/Oangeworld/waffle-100-oranje.png")
+    wafel.setAttribute("src", "./images/oangeworld/waffle-100-oranje.png")
     wafeltekst.innerHTML = "<strong>+</strong>$140 Miljoen";
     wafelteksten.innerHTML = "<strong>+</strong>$140 Million";
     wafeltekstpt.innerHTML = "<strong>+</strong>$140 Milhões";
