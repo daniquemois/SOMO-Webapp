@@ -7,7 +7,6 @@ import '../scripts/verdrag.js'
 
 // We can use node_modules directely in the browser!
 import * as d3 from 'd3';
-import { schemeDark2 } from 'd3';
 
 console.log('Hello, world!');
 
@@ -68,9 +67,10 @@ function setWindowSize() {
             (k.properties.bel) +
             "%",
           )
+          .append("text")
+          .attr("class", "country-text")
         });
-    d3.text()
-      .attr("class", "tekstblok")
+
     // ! For removing elements when resizing window
     var numberOfGElements = document.getElementsByTagName("g").length;
     if (numberOfGElements > 1) {

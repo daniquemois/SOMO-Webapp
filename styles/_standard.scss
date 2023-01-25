@@ -8,6 +8,9 @@
     margin: 0em;
     padding: 0em;
 }
+html {
+  scroll-behavior: smooth;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -69,6 +72,14 @@ header{
             transition: transform 0.3s;
             padding: .5em;
             text-align: left;
+            a{
+              text-decoration: none;
+              color: unset;
+              font-weight: unset;
+            }
+            a:hover{
+              text-decoration: underline;
+            }
             article{
                 padding: 1em;
                 border-top: 1px solid black;
@@ -81,6 +92,16 @@ header{
                     font-weight: 400;
                     font-size: 16px;
                     margin-bottom: 1em;
+                }
+                button{
+                  width: 50%;
+                  color: white;
+                  background-color: black;
+                  border: none;
+                  padding: 0.5em;
+                }
+                #verscheur{
+                  display: none;
                 }
             }
             li{
@@ -105,26 +126,26 @@ header{
                 z-index: 1;
             }
             > li:first-of-type::marker{
-                color: $somo-blauw;
+                color: $licht-groen;
             }
             > li:nth-of-type(2)::marker, li:nth-of-type(3)::marker{
-                color: $somo-blauw;
+                color: $licht-groen;
                 font-size: 32px!important;
             }
             > li:nth-of-type(4)::marker{
-                color: $licht-groen;
+                color: $geel;
                 font-size: 64px;
             }
             > li:nth-of-type(5)::marker, li:nth-of-type(6)::marker{
-                color: $licht-groen;
+                color: $geel;
                 font-size: 32px;
             }
             > li:nth-of-type(7)::marker{
-                color: $geel;
+                color: $somo-blauw;
                 font-size: 64px;
             }
             > li:nth-of-type(8)::marker, li:nth-of-type(9)::marker{
-                color: $geel;
+                color: $somo-blauw;
                 font-size: 32px;
             }
         }
@@ -137,7 +158,38 @@ header{
 main{
     background-color: $beige;
     margin-top: -1em;
+    #titeloranje{
+      font-family: $main-font;
+      margin-top: 4em;
+      text-align: center;
+      font-weight: 300;
+    }
+    .showbijondertekening{
+      opacity: 0;
+    }
     .blauw{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 15%;
+      article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+          text-align: left;
+          width: 100%;
+          font-size: 24px;
+          font-family: $main-font;
+          font-weight: 300;
+          color: #10A4A2;
+        } 
+      }
+    }
+    .margin{
+      margin-left: 15%;
+    }
+    .oranje{
       margin-left: 15%;
       margin-right: 15%;
       h2{
@@ -146,20 +198,73 @@ main{
         font-size: 24px;
         font-family: $main-font;
         font-weight: 300;
-        color: #10A4A2;
+        color: #E38A01;
+      }
+      h4{
+        text-align: center;
+        width: 100%;
+        font-size: 32px;
+        font-family: $main-font;
+        font-weight: 300;
+        margin-top: 1em;
+      }
+      #wafelpnl, #wafelpen, #wafelppt{
+        margin-top: 1em;
+      }
+    }
+    .eindblauw{
+      margin-left: 15%;
+      margin-right: 15%;
+      h2{
+        text-align: left;
+        width: 100%;
+        font-size: 24px;
+        font-family: $main-font;
+        font-weight: 300;
+        color: #0084CB;
+      }
+      h4{
+        text-align: center;
+        width: 100%;
+        font-size: 32px;
+        font-family: $main-font;
+        font-weight: 300;
+        margin-top: 1em;
       }
     }
     .data{
+      // display: flex;
+      // flex-direction: column;
+      // /* justify-content: center; */
+      // align-items: center;
+      // text-align: left;
+      img{
+        margin-top: 2em;
+        width: 40%;
+      }
       h3{
         text-align: left;
         font-size: 48px;
         font-family: $main-font;
         font-weight: 600;
         color: $zwart;
+        width: 100%;
       }
       p{
         font-weight: 300;
         font-family: $main-font;
+      }
+      #xscroll{
+        overflow-x: scroll;
+        section{
+          display: flex;
+          flex-direction: row;
+          width: 80%;
+          margin-left: 10%;
+          img{
+            width: 4em;
+          }
+        }
       }
     }
 }
@@ -191,71 +296,71 @@ main{
         cursor: pointer;
         stroke-width: 1.2;
       }
-      .tekstblok{
+      .country-text{
         background-color: hotpink;
       }
 }
 // switch
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
+// .switch {
+//     position: relative;
+//     display: inline-block;
+//     width: 60px;
+//     height: 34px;
+//   }
   
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+//   .switch input { 
+//     opacity: 0;
+//     width: 0;
+//     height: 0;
+//   }
   
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $beige;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
+//   .slider {
+//     position: absolute;
+//     cursor: pointer;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: $beige;
+//     -webkit-transition: .4s;
+//     transition: .4s;
+//   }
   
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-size: cover;
-    background-image: url("../images/pen.jpg");
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
+//   .slider:before {
+//     position: absolute;
+//     content: "";
+//     height: 26px;
+//     width: 26px;
+//     left: 4px;
+//     bottom: 4px;
+//     background-size: cover;
+//     background-image: url("../images/pen.jpg");
+//     -webkit-transition: .4s;
+//     transition: .4s;
+//   }
   
-  input:checked + .slider {
-    background-color: $somo-blauw;
-  }
+//   input:checked + .slider {
+//     background-color: $somo-blauw;
+//   }
   
-  input:focus + .slider {
-    box-shadow: 0 0 1px $somo-blauw;
-  }
+//   input:focus + .slider {
+//     box-shadow: 0 0 1px $somo-blauw;
+//   }
   
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
+//   input:checked + .slider:before {
+//     -webkit-transform: translateX(26px);
+//     -ms-transform: translateX(26px);
+//     transform: translateX(26px);
+//   }
   
   /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
+  // .slider.round {
+  //   border-radius: 34px;
+  // }
   
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  .hide{
-    display: none!important;
-  }
+  // .slider.round:before {
+  //   border-radius: 50%;
+  // }
+  // .hide{
+  //   display: none!important;
+  // }
