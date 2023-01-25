@@ -41,7 +41,7 @@ header{
         border: unset;
     }
     h1{
-        position: fixed;
+        position: absolute;
         text-align: center;
         width: 100%;
         padding-top: 2em;
@@ -158,24 +158,82 @@ header{
 main{
     background-color: $beige;
     margin-top: -1em;
-    #titeloranje{
+    .titeloranje{
+      position: absolute;
       font-family: $main-font;
-      margin-top: 4em;
+      top: 3em;
       text-align: center;
       font-weight: 300;
     }
+    #social{
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      justify-content: center;
+    }
     .showbijondertekening{
       opacity: 0;
+    }
+    #probleem{
+      background-image: url("../images/data/muntenstapel-blauw.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #gebouwnota{
+      background-image: url("../images/data/gebouw-nota-blauw.png");
+      background-repeat: no-repeat;
+      background-size: fit-content;
+      background-position-y: center;
+    }
+    #verdragen{
+      background-image: url("../images/data/muntenstapel-landen-oranje.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #betekenis2{
+      background-image: url("../images/data/huizen-wafel-oranje.png");
+      background-repeat: no-repeat;
+      background-size: fit-content;
+      background-position-y: bottom;
+    }
+    #watkanikdoen{
+      background-image: url("../images/data/boeken-helpen-blauw.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-y: bottom;
+    }
+    #doorsluisnl{
+      background-image: url("../images/data/vis-doorsluis-NL.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100vh;
+    }
+    #doorsluisen{
+      background-image: url("../images/data/vis-doorlsuis-ENG.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100vh;
+    }
+    #doorsluispt{
+      background-image: url("../images/data/vis-doorsluis-PT.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100vh;
     }
     .blauw{
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-right: 15%;
       article{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 15%;
+        margin-left: 15%;
+        width: 100%;
         h2{
           text-align: left;
           width: 100%;
@@ -184,60 +242,103 @@ main{
           font-weight: 300;
           color: #10A4A2;
         } 
+        img{
+          width: 40%;
+        }
       }
-    }
-    .margin{
-      margin-left: 15%;
     }
     .oranje{
-      margin-left: 15%;
-      margin-right: 15%;
-      h2{
-        text-align: left;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 15%;
+        margin-left: 15%;
         width: 100%;
-        font-size: 24px;
-        font-family: $main-font;
-        font-weight: 300;
-        color: #E38A01;
-      }
-      h4{
-        text-align: center;
-        width: 100%;
-        font-size: 32px;
-        font-family: $main-font;
-        font-weight: 300;
-        margin-top: 1em;
-      }
-      #wafelpnl, #wafelpen, #wafelppt{
-        margin-top: 1em;
+        h2{
+          text-align: left;
+          width: 100%;
+          font-size: 24px;
+          font-family: $main-font;
+          font-weight: 300;
+          color: #E38A01;
+        } 
+        h4{
+          text-align: center;
+          width: 100%;
+          font-size: 32px;
+          font-family: $main-font;
+          font-weight: 300;
+          margin-top: 1em;
+        }
+        .toelichting{
+          margin-top: 5em;
+          color: #E38A01;
+        }
+        #wafelpnl, #wafelpen, #wafelppt{
+          margin-top: 4em;
+        }
       }
     }
     .eindblauw{
-      margin-left: 15%;
-      margin-right: 15%;
-      h2{
-        text-align: left;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 15%;
+        margin-left: 15%;
         width: 100%;
-        font-size: 24px;
-        font-family: $main-font;
-        font-weight: 300;
-        color: #0084CB;
+        h2{
+          text-align: left;
+          width: 100%;
+          font-size: 24px;
+          font-family: $main-font;
+          font-weight: 300;
+          color: #0084CB;
+        }
+        h4{
+          text-align: center;
+          width: 100%;
+          font-size: 32px;
+          font-family: $main-font;
+          font-weight: 300;
+          margin-top: 1em;
+        }
+        section{
+          display: flex;
+          flex-direction: column;
+        }
       }
-      h4{
-        text-align: center;
-        width: 100%;
-        font-size: 32px;
-        font-family: $main-font;
-        font-weight: 300;
-        margin-top: 1em;
+    }
+    #oplossing{
+      padding-bottom: 10em;
+      article{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        section{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          img{
+            height: 10em;
+            width: auto;
+          }
+          h3{
+            font-size: 24px;
+            text-align: center;
+          }
+        }
       }
     }
     .data{
-      // display: flex;
-      // flex-direction: column;
-      // /* justify-content: center; */
-      // align-items: center;
-      // text-align: left;
       img{
         margin-top: 2em;
         width: 40%;
@@ -256,13 +357,14 @@ main{
       }
       #xscroll{
         overflow-x: scroll;
+        margin-bottom: 5em;
         section{
           display: flex;
           flex-direction: row;
           width: 80%;
-          margin-left: 10%;
           img{
-            width: 4em;
+            height: 5em;
+            width: auto;
           }
         }
       }
@@ -300,67 +402,8 @@ main{
         background-color: hotpink;
       }
 }
-// switch
-// .switch {
-//     position: relative;
-//     display: inline-block;
-//     width: 60px;
-//     height: 34px;
-//   }
-  
-//   .switch input { 
-//     opacity: 0;
-//     width: 0;
-//     height: 0;
-//   }
-  
-//   .slider {
-//     position: absolute;
-//     cursor: pointer;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: $beige;
-//     -webkit-transition: .4s;
-//     transition: .4s;
-//   }
-  
-//   .slider:before {
-//     position: absolute;
-//     content: "";
-//     height: 26px;
-//     width: 26px;
-//     left: 4px;
-//     bottom: 4px;
-//     background-size: cover;
-//     background-image: url("../images/pen.jpg");
-//     -webkit-transition: .4s;
-//     transition: .4s;
-//   }
-  
-//   input:checked + .slider {
-//     background-color: $somo-blauw;
-//   }
-  
-//   input:focus + .slider {
-//     box-shadow: 0 0 1px $somo-blauw;
-//   }
-  
-//   input:checked + .slider:before {
-//     -webkit-transform: translateX(26px);
-//     -ms-transform: translateX(26px);
-//     transform: translateX(26px);
-//   }
-  
-  /* Rounded sliders */
-  // .slider.round {
-  //   border-radius: 34px;
-  // }
-  
-  // .slider.round:before {
-  //   border-radius: 50%;
-  // }
-  // .hide{
-  //   display: none!important;
-  // }
+footer{
+  text-align: center;
+  background-color: $beige;
+  padding: .5em;
+}

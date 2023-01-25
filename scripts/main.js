@@ -3,6 +3,7 @@ import '../styles/global.scss'
 import '../scripts/language.js'
 import '../scripts/parallax.js'
 import '../scripts/verdrag.js'
+import '../scripts/social.js'
 
 
 // We can use node_modules directely in the browser!

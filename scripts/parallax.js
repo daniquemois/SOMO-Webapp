@@ -22,16 +22,14 @@ let bluelayer2 = document.getElementById("blueworldlayer2");
 let bluelayer3 = document.getElementById("blueworldlayer3");
 let bluelayer4 = document.getElementById("blueworldlayer4");
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
+let character1 = document.getElementById("greenworld");
+let character2 = document.getElementById("orangeworld");
+let character3 = document.getElementById("blueworld");
 
-    layer1.style.top = value * 1.8 + 'px';
-    button1.style.top = value * 1.5 + 'px';
-    titel.style.top = value * -1.5 + 'px';
-    titelen.style.top = value * -1.5 + 'px';
-    titelpt.style.top = value * -1.5 + 'px';
+window.addEventListener('scroll', () => {
+    let value = window.scrollY; 
     layer2.style.top = value * 1.5 + 'px';
-    layer7.style.top = value * 1.5 + 'px';
+    layer1.style.top = value * 1.8 + 'px';
 })
 
 window.addEventListener('scroll', () => {
@@ -96,7 +94,7 @@ function textEffect() {
         }
     }
 }
-button1.addEventListener("click", textEffect)
+character1.addEventListener("click", textEffect)
 
 var index2 = 0;
 var text2nl = 'Wil jij weten welke landen een slecht verdrag hebben met Mozambique? Scroll dan snel verder!';
@@ -130,7 +128,7 @@ function text2Effect() {
         }
     }
 }
-olayer3.addEventListener("click", text2Effect)
+character2.addEventListener("click", text2Effect)
 
 
 var index3 = 0;
@@ -165,4 +163,4 @@ function tekst3Effect() {
         }
     }
 }
-bluelayer4.addEventListener("click", tekst3Effect)
+character3.addEventListener("click", tekst3Effect)
