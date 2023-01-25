@@ -426,7 +426,9 @@ footer{
   }
   .tableofcontents{
     background-image: url("../images/Verdrag-noblack.png");
-    aspect-ratio: 1 / 1.7!important;
-    background-size: cover;
+    background-size: cover!important;
   }
+}
+button:hover{
+  cursor: pointer;
 }
