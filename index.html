@@ -35,32 +35,32 @@
           <li><a href="#doorsluisland">What is a tax haven?</a></li>
           <li><a href="#betekenis">What does this mean for Mozambique?</a></li>
           <li><a href="#verdragen">Which countries have these treaties?</a></li>
-          <li>What does this mean for Mozambicans?</li>
-          <li>How can we solve this problem?</li>
-          <li>What can I do about it?</li>
-          <li>What are the possible solutions?</li>
+          <li><a href="#betekenis2">What does this mean for Mozambicans?</a></li>
+          <li><a href="#oplossen">How can we solve this problem?</a></li>
+          <li><a href="#watkanikdoen">What can I do about it?</a></li>
+          <li><a href="#oplossing">What are the possible solutions?</a></li>
           <article>
             <h3>Hereby I sign this treaty for 0% profit tax:</h3>
             <label class="switch">
-              <button id="teken">Sign</button>
-              <button id="verscheur">Verscheur</button>
+              <button id="sign">Sign</button>
+              <button id="tear">Tear apart</button>
             </label>
           </article>
         </ul>
         <ul data-pt class="tableofcontents tocpt">
-          <li>O que é o problema?</li>
-          <li>O que é a evasão fiscal?</li>
-          <li>O que é um paraíso fiscal?</li>
-          <li>O que isso significa para Moçambique?</li>
-          <li>Quais países têm esses tratados?</li>
-          <li>O que isso significa para os moçambicanos?</li>
-          <li>Como podemos resolver esse problema?</li>
-          <li>O que posso fazer a respeito?</li>
-          <li>Quais são as possíveis soluções?</li>
+          <li><a href="#probleem">O que é o problema?</a></li>
+          <li><a href="#belastingontwijking">O que é a evasão fiscal?</a></li>
+          <li><a href="#doorsluisland">O que é um paraíso fiscal?</a></li>
+          <li><a href="#betekenis">O que isso significa para Moçambique?</a></li>
+          <li><a href="#verdragen">Quais países têm esses tratados?</a></li>
+          <li><a href="#betekenis2">O que isso significa para os moçambicanos?</a></li>
+          <li><a href="#oplossen">Como podemos resolver esse problema?</a></li>
+          <li><a href="#watkanikdoen">O que posso fazer a respeito?</a></li>
+          <li><a href="#oplossing">Quais são as possíveis soluções?</a></li>
           <article>
             <h3>Aqui eu assino este tratado para 0% de imposto de lucro:</h3>
-            <button id="teken">Teken</button>
-            <button id="verscheur">Verscheur</button>
+            <button id="sinal">O sinal</button>
+            <button id="rasgar">Rasgar</button>
           </article>
         </ul>
         <article>
@@ -84,9 +84,13 @@
     <main>
       <section class="verdrag">
         <article>
-          <img src="./images/Verdag.png" class="verdragpl">
+          <img data-nl src="./images/verdrag/vedrag-dutch.png" class="verdragpl" id="verdrag">
+          <img data-en src="./images/verdrag/verdrag-engels.png" class="verdragpl" id="verdrag-en">
+          <img data-pt src="./images/verdrag/verdrag-spaans.png" class="verdragpl" id="verdragpt">
           <section class="showbijondertekening">
-            <h2>Jij hebt er mede voor gezorgd dat Mozambique <strong>geen winst</strong> maakt en hierdoor zich niet kan ontwikkelen</h2>
+            <h2 data-nl>Jij hebt er mede voor gezorgd dat Mozambique <strong>geen winst</strong> maakt en hierdoor zich niet kan ontwikkelen</h2>
+            <h2 data-en>You have contributed to the fact that Mozambique <strong>does not make a profit</strong> and therefore cannot develop</h2>
+            <h2 data-pt>Você contribuiu para o fato de Moçambique <strong>não fazer lucro</strong> e, portanto, não pode se desenvolver</h2>
           </section>
           <section class="showbijondertekening">
             <img src="./images/icons/banen-vs5.svg">
@@ -106,9 +110,6 @@
             <p data-en><strong>Less</strong> opportunity for infrastructure improvement</p>
             <p data-pt><strong>Mais</strong> oportunidades para melhorar a infraestrutura</p>
           </section>
-          <button data-nl class="onderteken">Teken hier het verdrag</button>
-          <button data-en class="onderteken">Sign here the treaty</button>
-          <button data-pt class="onderteken">Assine aqui o tratado</button>
         </article>
         <img src="./images/Verdag-Oil-field.png" id="verdaglayer2">
         <img src="./images/Verdag-Front-Bush.png" id="verdaglayer1">
@@ -144,7 +145,15 @@
 
       <section class="data blauw" id="gebouwnota">
         <article>
-          <img data-nl src="./images/bedrijfa.jpg">
+          <button data-nl id="buttonnotanl">Maak gebruik van belastingontwijking</button>
+          <button data-en id="buttonnotaen">Make use of tax evasion</button>
+          <button data-pt id="buttonnotapt">Use evasão fiscal</button>
+          <button data-nl id="buttonlegaal">Betaal je belasting legaal</button>
+          <button data-en id="buttonlegal">Pay your taxes legally</button>
+          <button data-pt id="buttonlegalpt">Pague seus impostos legalmente</button>
+          <img data-nl src="./images/data/from-groen-NL.png" id="notanl">
+          <img data-en src="./images/data/form-groen-ENG.png" id="notaen">
+          <img data-pt src="./images/data/form-groen-PT.png" id="notapt">
         </article>
       </section>
 
@@ -191,10 +200,13 @@
         </article>
       </section>
 
-      <div class="mapcont">
-        <svg id="map"></svg>
-      </div>
+      <section class="data oranje" id="kaart">
+        <article>
+          <svg id="map"></svg>
+        </article>
+      </section>
 
+    
       <section class="data oranje" id="betekenis2">
         <article>
           <h2 data-nl>Bekijk de geschatte alternatieven</h2>

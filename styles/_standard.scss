@@ -100,7 +100,7 @@ header{
                   border: none;
                   padding: 0.5em;
                 }
-                #verscheur{
+                #verscheur, #tear, #rasgar{
                   display: none;
                 }
             }
@@ -174,54 +174,56 @@ main{
     .showbijondertekening{
       opacity: 0;
     }
-    #probleem{
-      background-image: url("../images/data/muntenstapel-blauw.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    #gebouwnota{
-      background-image: url("../images/data/gebouw-nota-blauw.png");
-      background-repeat: no-repeat;
-      background-size: fit-content;
-      background-position-y: center;
-    }
-    #verdragen{
-      background-image: url("../images/data/muntenstapel-landen-oranje.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    #betekenis2{
-      background-image: url("../images/data/huizen-wafel-oranje.png");
-      background-repeat: no-repeat;
-      background-size: fit-content;
-      background-position-y: bottom;
-    }
-    #watkanikdoen{
-      background-image: url("../images/data/boeken-helpen-blauw.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position-y: bottom;
-    }
-    #doorsluisnl{
-      background-image: url("../images/data/vis-doorsluis-NL.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 100%;
-      height: 100vh;
-    }
-    #doorsluisen{
-      background-image: url("../images/data/vis-doorlsuis-ENG.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 100%;
-      height: 100vh;
-    }
-    #doorsluispt{
-      background-image: url("../images/data/vis-doorsluis-PT.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 100%;
-      height: 100vh;
+    @media (min-width: 1110px){
+      #probleem{
+        background-image: url("../images/data/muntenstapel-blauw.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      #gebouwnota{
+        background-image: url("../images/data/gebouw-nota-blauw.png");
+        background-repeat: no-repeat;
+        background-size: fit-content;
+        background-position-y: center;
+      }
+      #verdragen{
+        background-image: url("../images/data/muntenstapel-landen-oranje.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      #betekenis2{
+        background-image: url("../images/data/huizen-wafel-oranje.png");
+        background-repeat: no-repeat;
+        background-size: fit-content;
+        background-position-y: bottom;
+      }
+      #watkanikdoen{
+        background-image: url("../images/data/boeken-helpen-blauw.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
+      }
+      #doorsluisnl{
+        background-image: url("../images/data/vis-doorsluis-NL.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100vh;
+      }
+      #doorsluisen{
+        background-image: url("../images/data/vis-doorlsuis-ENG.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100vh;
+      }
+      #doorsluispt{
+        background-image: url("../images/data/vis-doorsluis-PT.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100vh;
+      }
     }
     .blauw{
       display: flex;
@@ -234,6 +236,15 @@ main{
         margin-right: 15%;
         margin-left: 15%;
         width: 100%;
+        #buttonlegaal, #buttonlegal, #buttonlegalpt{
+          display: none;
+        }
+        button{
+          color: white;
+          background-color: black;
+          border: none;
+          padding: 0.5em;
+        }
         h2{
           text-align: left;
           width: 100%;
@@ -245,6 +256,12 @@ main{
         img{
           width: 40%;
         }
+      }
+    }
+    #kaart{
+      article{
+        align-items: center!important;
+        margin-left: -15%!important;
       }
     }
     .oranje{
@@ -318,6 +335,11 @@ main{
     }
     #oplossing{
       padding-bottom: 10em;
+      @media (max-width: 767px){
+        article{
+          flex-direction: column!important;
+        }
+      }
       article{
         display: flex;
         flex-direction: row;
@@ -370,40 +392,41 @@ main{
       }
     }
 }
-  a {
-    text-decoration: underline;
-    font-weight: bold;
-    color: white;
-  }
-#map{
-    width: 80%;
-    margin-left: -10%;
-    height: 80%;
-    .countries {
-        fill: $legergroen;
-        stroke: $beige;
-        stroke-width: 1.2;
-      }
-      .belastingland{
-        fill: $geel!important;
-        stroke: $beige;
-        stroke-width: 1.2;
-      }
-      .belastingland:hover{
-        fill: $somo-rood!important;
-        stroke: $beige;
-        stroke-width: 1.2;
-      }
-      .countries:hover{
-        cursor: pointer;
-        stroke-width: 1.2;
-      }
-      .country-text{
-        background-color: hotpink;
-      }
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: white;
 }
 footer{
   text-align: center;
   background-color: $beige;
   padding: .5em;
+}
+@media (max-width: 767px){
+  h1{
+    font-size: 32px!important;
+  }
+  h2{
+    font-size: 18px!important;
+  }
+  h3{
+    font-size: 24px!important;
+  }
+  h4{
+    font-size: 24px!important;
+  }
+  p, li{
+    font-size: 12px!important;
+  }
+  .verdragpl{
+    height: 50vh!important;
+  }
+  #notanl, #notaen, #notapt{
+    width: 70vw!important;
+  }
+  .tableofcontents{
+    background-image: url("../images/Verdrag-noblack.png");
+    aspect-ratio: 1 / 1.7!important;
+    background-size: cover;
+  }
 }
