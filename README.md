@@ -19,7 +19,7 @@
   
 <section>
   <h2 id="installatie">Installatie</h2>
-  <p>Voor dit project moet je meerdere dingen installeren. Vooral je repository lokaal zetten en het clonen van de template wiki was ingewikkeld:</p>
+  <p>Voor dit project moet je meerdere dingen installeren. Dit zijn de stappen die je moet ondernemen:</p>
   <p>Lokaliseren van je project</p>
 <p>Zorgen dat je naar je desktop navigeert</p>
 
@@ -42,7 +42,7 @@ npm install
 <p>De website runnen</p>
 
 ```
-npm run start
+npm run dev
 ```
 
   
