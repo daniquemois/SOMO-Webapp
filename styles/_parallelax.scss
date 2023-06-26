@@ -1,237 +1,282 @@
 .greenworld{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    width: 100%;
-    #character1{
-      height: 80%!important;
-      bottom: 0px;
-      top: unset!important;
-      object-fit: contain;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  #character1{
+    height: 80%!important;
+    bottom: 0px;
+    top: unset!important;
+    object-fit: contain;
+  }
+  img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+  }
+  #intro{
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+      width: 33vw;
+      margin-left: 30vw;
+      margin-top: -60vh;
+      font-size: 16px;
+      color: black;
+      font-family: $main-font;
+      text-align: center;
     }
-    img{
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-    #intro{
-        position: relative;
-        z-index: 1;
-        margin: 0 auto;
-        width: 33vw;
-        margin-left: 30vw;
-        margin-top: -60vh;
-        font-size: 16px;
-        color: black;
-        font-family: $main-font;
-        text-align: center;
+  #info1{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.5em;
+      height: 1.5em;
+      background-color: $somo-rood;
+      border-radius: 50%;
+      position: relative;
+      left: 43.5vw;
+      margin-bottom: 10em;
+      border: none;
+      z-index: 1;
+  }
+  #info1:before {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      border: 1px solid $somo-rood;
+      border-radius: inherit;
+      position: absolute;
+      z-index: -10;
+      opacity: 0;
+      animation: 2s expand cubic-bezier(.29,0,0,1) infinite;
+      animation-delay: 1s;
+  }
+  @keyframes expand{
+      /* Starting at 1 to prevent IOS flicker */
+      1% {
+        width: 0;
+        height: 0;
+        opacity: 1;
       }
-    #info1{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        width: 1.5em;
-        height: 1.5em;
-        background-color: $somo-rood;
-        border-radius: 50%;
-        position: relative;
-        left: 43.5vw;
-        margin-bottom: 10em;
-        border: none;
-        z-index: 1;
-    }
-    #info1:before {
-        content: "";
-        position: absolute;
-        width: inherit;
-        height: inherit;
-        border: 1px solid $somo-rood;
-        border-radius: inherit;
-        position: absolute;
-        z-index: -10;
+      100%
+      {
+        width: 750%;
+        height: 750%;
         opacity: 0;
-        animation: 2s expand cubic-bezier(.29,0,0,1) infinite;
-        animation-delay: 1s;
-    }
-    @keyframes expand{
-        /* Starting at 1 to prevent IOS flicker */
-        1% {
-          width: 0;
-          height: 0;
-          opacity: 1;
-        }
-        100%
-        {
-          width: 750%;
-          height: 750%;
-          opacity: 0;
-          border-color: #fff;
-          background-color: none;
-          border-width: 2px;
-        }
+        border-color: #fff;
+        background-color: none;
+        border-width: 2px;
       }
+    }
 }
 .verdrag{
-  background-color: $beige;
-  position: relative;
+background-color: $beige;
+position: relative;
+height: 100vh;
+z-index: 2;
+margin-top: -1em;
+> img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
   height: 100vh;
-  z-index: 2;
-  margin-top: -1em;
+  object-fit: cover;
+}
+article{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   > img{
+    position: absolute;
+    left: 0;
+    top: -5em;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 100;
+  }
+  h2{
+    z-index: 100;
+    text-align: left;
+    width: 20em;
+    margin-top: 2em;
+    margin-left: 1em;
+    font-family: $main-font;
+  }
+  button{
+    z-index: 100;
+    width: 15%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: $main-font;
+    margin-left: -17%;
+    border: none;
+    padding: .2em;
+    margin-top: 0%;
+  }
+  section:first-of-type{
+    margin-top: -8em;
+    h2{
+      font-size: 20px;
+      z-index: -1;
+      width: 30em;
+      text-align: center;
+      margin-bottom: 1em;
+      font-weight: 200;
+    }
+  }
+  section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;;
+    img{
+      height: 5em;
+    }
+    p{
+      font-style: $main-font;
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+}
+}
+.data{
+position: relative;
+padding-top: 5em;
+z-index: 10;
+}
+.orangeworld{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+z-index: 1;
+overflow: hidden;
+#character2{
+  height: 80%!important;
+  bottom: 0px;
+  top: unset!important;
+  object-fit: contain;
+}
+#orangeworldlayer3{
+  height: 60vh;
+  object-fit: contain;
+  bottom: 0;
+  top: unset;
+}
+img{
     position: absolute;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-  }
-  article{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    > img{
-      position: absolute;
-      left: 0;
-      top: -5em;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: 100;
-    }
-    h2{
-      z-index: 100;
-      text-align: left;
-      width: 20em;
-      margin-top: 2em;
-      margin-left: 1em;
-      font-family: $main-font;
-    }
-    button{
-      z-index: 100;
-      width: 15%;
-      background-color: black;
-      color: white;
-      font-size: 16px;
-      font-family: $main-font;
-      margin-left: -17%;
-      border: none;
-      padding: .2em;
-      margin-top: 0%;
-    }
-    section:first-of-type{
-      margin-top: -8em;
-      h2{
-        font-size: 24px;
-        z-index: -1;
-        width: 30em;
-        text-align: center;
-        margin-bottom: 1em;
-        font-weight: 200;
-      }
-    }
-    section{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 30px;;
-      img{
-        height: 5em;
-      }
-      p{
-        font-style: $main-font;
-        font-size: 18px;
-        font-weight: 200;
-      }
-    }
-  }
 }
-.data{
+#kaarttekst{
   position: relative;
-  padding-top: 5em;
-  z-index: 10;
-}
-.orangeworld{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   z-index: 1;
-  overflow: hidden;
-  #character2{
-    height: 80%!important;
-    bottom: 0px;
-    top: unset!important;
-    object-fit: contain;
-  }
-  #orangeworldlayer3{
-    height: 60vh;
-    object-fit: contain;
-    bottom: 0;
-    top: unset;
-  }
-  img{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-  }
-  #kaarttekst{
-    position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    width: 28vw;
-    margin-left: 35vw;
-    margin-top: -60vh;
-    font-size: 16px;
-    color: black;
-    font-family: $main-font;
-    text-align: center;
-  }
+  margin: 0 auto;
+  width: 28vw;
+  margin-left: 35vw;
+  margin-top: -60vh;
+  font-size: 16px;
+  color: black;
+  font-family: $main-font;
+  text-align: center;
+}
 }
 .blueworld{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90vh;
+overflow: hidden;
+width: 100%;
+#character3{
+  height: 80%!important;
+  bottom: 0px;
+  top: unset!important;
+  object-fit: contain;
+}
+img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+#oplossingtekst{
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  overflow: hidden;
-  width: 100%;
-  #character3{
-    height: 80%!important;
-    bottom: 0px;
-    top: unset!important;
-    object-fit: contain;
-  }
-  img{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-  }
-  #oplossingtekst{
-    position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    width: 28vw;
-    margin-left: 43vw;
-    margin-top: -50vh;
-    font-size: 16px;
-    color: black;
-    font-family: $main-font;
-    text-align: center;
-  }
+  z-index: 1;
+  margin: 0 auto;
+  width: 28vw;
+  margin-left: 43vw;
+  margin-top: -50vh;
+  font-size: 16px;
+  color: black;
+  font-family: $main-font;
+  text-align: center;
+}
+}
+@media (max-width: 767px){
+.active{
+  transform: translateX(50%)!important;
+  transition: transform 0.3s;
+}
+
+.verdrag{
+height: auto!important;
+> img{
+  height: auto!important;
+}
+article{
+  height: auto!important;
+}
+}
+main .blauw article{
+  align-items: flex-start!important;
+  width: 60vw!important;
+}
+main .oranje article{
+  align-items: flex-start!important;
+  width: 60vw!important;
+}
+main .eindblauw article{
+  align-items: flex-start!important;
+  width: 60vw!important;
+}
+img#wafel, svg#map{
+  margin-left: 35%!important;
+}
+.tooltip{
+  font-size: 12px!important;
+}
+h1{
+  font-size: 18px!important;
+  margin-top: 1em!important;
+}
+header .menu > ul li:before {
+    left: -1.8em;
+    border-left: 1px solid black;
+}
+header .menu > ul > li::marker {
+  font-size: 60px;
+}
 }
