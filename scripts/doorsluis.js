@@ -10,6 +10,10 @@ let buttonlegalpt = document.getElementById("buttonlegalpt")
 var theLanguage = document.getElementsByTagName("html")[0].getAttribute("lang");
 var html = document.querySelector("html");
 
+var engelsButton = document.querySelector(".engels")
+var portugeesButton = document.querySelector(".portugees")
+var nederlandsButton = document.querySelector(".nederlands")
+
 function aangifteLegaal(){
     if(theLanguage == "en"){
         notaENG.setAttribute("src", "./images/data/form-groen-ENG.png")

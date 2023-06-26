@@ -130,7 +130,7 @@
     section:first-of-type{
       margin-top: -8em;
       h2{
-        font-size: 24px;
+        font-size: 20px;
         z-index: -1;
         width: 30em;
         text-align: center;
@@ -234,4 +234,49 @@
     font-family: $main-font;
     text-align: center;
   }
+}
+@media (max-width: 767px){
+  .active{
+    transform: translateX(50%)!important;
+    transition: transform 0.3s;
+}
+
+.verdrag{
+  height: auto!important;
+  > img{
+    height: auto!important;
+  }
+  article{
+    height: auto!important;
+}
+}
+  main .blauw article{
+    align-items: flex-start!important;
+    width: 60vw!important;
+  }
+  main .oranje article{
+    align-items: flex-start!important;
+    width: 60vw!important;
+  }
+  main .eindblauw article{
+    align-items: flex-start!important;
+    width: 60vw!important;
+  }
+  img#wafel, svg#map{
+    margin-left: 35%!important;
+  }
+  .tooltip{
+    font-size: 12px!important;
+  }
+  h1{
+    font-size: 18px!important;
+    margin-top: 1em!important;
+  }
+  header .menu > ul li:before {
+      left: -1.8em;
+      border-left: 1px solid black;
+  }
+  header .menu > ul > li::marker {
+    font-size: 60px;
+}
 }
