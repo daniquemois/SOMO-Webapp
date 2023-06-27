@@ -384,9 +384,11 @@ main{
           display: flex;
           flex-direction: row;
           width: 80%;
+          height: 5em;
           img{
-            height: 5em;
             width: auto;
+            height: 100%;
+            margin-top: unset!important;
           }
         }
       }
@@ -431,4 +433,18 @@ footer{
 }
 button:hover{
   cursor: pointer;
+}
+.rood{
+  color: rgb(227, 5, 19);
+  margin-top: 1em;
+}
+
+.yellow{
+  color: rgb(185, 155, 4);
+}
+#xscroll p{
+  font-weight: 500;
+  margin-top: 1em;
+  text-align: left;
+  width: 80%;
 }
