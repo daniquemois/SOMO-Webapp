@@ -62,7 +62,7 @@ header{
         .tableofcontents{
             background-image: url("../images/Verdrag-noblack.png");
             aspect-ratio: 1 / 1.1;
-            background-size: cover;
+            background-size: contain;
         }
         > ul{
             position: fixed;
@@ -423,13 +423,13 @@ footer{
   .verdragpl{
     height: 50vh!important;
   }
-  #notanl, #notaen, #notapt{
-    width: 70vw!important;
-  }
-  .tableofcontents{
-    background-image: url("../images/Verdrag-noblack.png");
-    background-size: cover!important;
-  }
+  // #notanl, #notaen, #notapt{
+  //   width: 70vw!important;
+  // }
+  // .tableofcontents{
+  //   background-image: url("../images/Verdrag-noblack.png");
+  //   background-size: cover!important;
+  // }
 }
 button:hover{
   cursor: pointer;
